@@ -71,7 +71,7 @@ body {
 }
 
 .heart-button {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -123,23 +123,6 @@ body {
 .font-handwritten {
     font-family: 'Great Vibes', cursive;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.no-button:hover::before {
-    /* content: 'Đồng ý'; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(to right, #ff4d4d, #ff99cc); */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    font-family: 'Great Vibes', cursive;
-    font-size: 20px; /* Font size cho text trong pseudo-element */
 }
 
 button {

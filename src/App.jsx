@@ -162,7 +162,7 @@ const App = () => {
                     <div ref={flapRef} className="envelope-flap"></div>
                     <button
                         onClick={handleNext}
-                        className="heart-button bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:from-red-600 hover:to-pink-600 transition transform hover:scale-110 animate-pulse"
+                        className="heart-button bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:from-red-600 hover:to-pink-600 hover:scale-110 animate-pulse"
                     >
                         ❤️ Mở thư
                     </button>
@@ -187,7 +187,7 @@ const App = () => {
                             <>
 
                                 <p className="text-4xl text-red-600 mb-10 font-handwritten font-bold animate-bounce">
-                                    HoangLM281197 ❤️ MyLinh
+                                    MinhHoang ❤️ MyLinh
                                 </p>
                                 <button
                                         onClick={handleAgree}
@@ -196,14 +196,12 @@ const App = () => {
                                         Đồng ý đi mà 🥺
                                         </button>
 
-                                <div className="relative w-full h-full flex justify-center">
+                                <div className="relative w-full flex justify-center">
                                     <button
-                                        ref={noButtonRef}
-                                        onMouseEnter={handleHover}
-                                        onClick={handleDisAgree}
-                                        className="no-button relative bg-gradient-to-r from-gray-400 to-gray-500 text-white px-6 py-3 rounded-full shadow-lg hover:from-red-500 hover:to-pink-500 transition transform hover:scale-110 text-center"
-                                    >
-                                        {{disagreeText}}
+                                            onClick={handleDisAgree}
+                                            className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-10 py-5 rounded-full shadow-lg hover:from-green-500 hover:to-emerald-600 transition transform hover:scale-110 animate-pulse text-center"
+                                        >
+                                            {disagreeText}
                                     </button>
                                 </div>
                             </>
