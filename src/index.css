@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: linear-gradient(to bottom, #ff99cc, #ff6699);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    font-size: 20px; /* Font size mặc định cho toàn bộ text */
+}
+
+.heart {
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    background: red;
+    transform: rotate(-45deg);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 60px;
+    height: 55px;
+    position: absolute;
+    background: red;
+    border-radius: 30px;
+}
+
+.heart:before {
+    top: -30px;
+    left: 0;
+}
+
+.heart:after {
+    left: 30px;
+    top: 0;
+}
+
+.envelope {
+    width: 320px;
+    height: 220px;
+    background: #fff;
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 110px solid #ddd;
+    transform-origin: top;
+    z-index: 2;
+}
+
+.heart-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.big-envelope {
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(to bottom, #fff1f5, #ffe4e9);
+    position: relative;
+    border: 3px solid #ff99cc;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.big-envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 200px solid #ffccd5;
+    transform-origin: top;
+    z-index: 2;
+}
+
+.big-envelope-content {
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.story-text {
+    min-height: 120px;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.font-handwritten {
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.no-button:hover::before {
+    /* content: 'Đồng ý'; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to right, #ff4d4d, #ff99cc); */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px; /* Font size cho text trong pseudo-element */
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
