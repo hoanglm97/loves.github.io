@@ -17,7 +17,7 @@ const App = () => {
     const storyRef = useRef(null);
     const noButtonRef = useRef(null);
     const typedRef = useRef(null);
-
+    const [disagreeText, setDisagreeText] = useState("Không đồng ý")
     const stories = [
         "Từ ngày gặp em, anh biết thế nào là yêu. Em như ánh nắng làm trái tim anh ấm áp mỗi ngày.",
         "Nụ cười của em là thứ anh muốn thấy mỗi sáng, như cách hoa hướng dương luôn hướng về mặt trời.",
@@ -135,6 +135,15 @@ const App = () => {
             setShowFinalMessage(true);
         }, 500);
     };
+    const handleDisAgree = () => {
+        setDisagreeText("Tada làm gì có chuyện từ chốiiii, hehe em phải đồng ý")
+        setShowConfetti(true);
+        setTimeout(() => {
+            alert("Yay! Em đồng ý rồi, anh hạnh phúc nhất luôn! ❤️");
+            setShowBigEnvelope(false);
+            setShowFinalMessage(true);
+        }, 1500);
+    };
 
     return (
         <div className="flex flex-col items-center justify-center h-screen text-center">
@@ -191,10 +200,10 @@ const App = () => {
                                     <button
                                         ref={noButtonRef}
                                         onMouseEnter={handleHover}
-                                        onClick={handleAgree}
+                                        onClick={handleDisAgree}
                                         className="no-button relative bg-gradient-to-r from-gray-400 to-gray-500 text-white px-6 py-3 rounded-full shadow-lg hover:from-red-500 hover:to-pink-500 transition transform hover:scale-110 text-center"
                                     >
-                                        Không đồng ý
+                                        {{disagreeText}}
                                     </button>
                                 </div>
                             </>
